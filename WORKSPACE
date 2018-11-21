@@ -129,7 +129,7 @@ load("@bazel_tools//tools/build_defs/repo:java.bzl", "java_import_external")
 #   com.google.oauth-client:google-oauth-client:1.22.0
 #   org.json:json:20170516
 #   junit:junit_4:4.12
-#   org.mockito:mockito-core:2.8.47
+#   org.mockito:mockito-core:2.9.0
 #   com.google.truth:truth:0.32
 
 java_import_external(
@@ -439,10 +439,10 @@ java_import_external(
 java_import_external(
     name = "net_bytebuddy_byte_buddy",
     licenses = ["notice"],  # The Apache Software License, Version 2.0
-    jar_sha256 = "917758b3c651e278a15a029ba1d42dbf802d8b0e1fe2aa4b81c5750c64f461c1",
+    jar_sha256 = "43a1299d37f2d080971f5e0deadea3c32aeeb0a1ebcc70c0839f220b93d077df",
     jar_urls = [
-        "https://maven.ibiblio.org/maven2/net/bytebuddy/byte-buddy/1.6.14/byte-buddy-1.6.14.jar",
-        "https://repo1.maven.org/maven2/net/bytebuddy/byte-buddy/1.6.14/byte-buddy-1.6.14.jar",
+        "https://maven.ibiblio.org/maven2/net/bytebuddy/byte-buddy/1.9.4/byte-buddy-1.9.4.jar",
+        "https://repo1.maven.org/maven2/net/bytebuddy/byte-buddy/1.9.4/byte-buddy-1.9.4.jar",
     ],
     deps = [
         "@com_google_code_findbugs_annotations",
@@ -452,10 +452,10 @@ java_import_external(
 java_import_external(
     name = "net_bytebuddy_byte_buddy_agent",
     licenses = ["notice"],  # The Apache Software License, Version 2.0
-    jar_sha256 = "c141a2d6809c3eeff4a43d25992826abccebdd4b793af3e7a5f346e88ae73a33",
+    jar_sha256 = "53f385017156f78bea422ec765ae3995b12df1573563ea2c424ea4a86c037a8a",
     jar_urls = [
-        "https://maven.ibiblio.org/maven2/net/bytebuddy/byte-buddy-agent/1.6.14/byte-buddy-agent-1.6.14.jar",
-        "https://repo1.maven.org/maven2/net/bytebuddy/byte-buddy-agent/1.6.14/byte-buddy-agent-1.6.14.jar",
+        "https://maven.ibiblio.org/maven2/net/bytebuddy/byte-buddy-agent/1.9.4/byte-buddy-agent-1.9.4.jar",
+        "https://repo1.maven.org/maven2/net/bytebuddy/byte-buddy-agent/1.9.4/byte-buddy-agent-1.9.4.jar",
     ],
 )
 
@@ -507,10 +507,10 @@ java_import_external(
 java_import_external(
     name = "org_mockito_core",
     licenses = ["notice"],  # The MIT License
-    jar_sha256 = "c496fe3790c55c07697cf37f5062f8758591ab035900bc108ce185b48df563a0",
+    jar_sha256 = "0bff125cd11af253b9953c6cb1495e30aa2ecc5767e0f804f205c0eda9981f18",
     jar_urls = [
-        "https://repo1.maven.org/maven2/org/mockito/mockito-core/2.8.47/mockito-core-2.8.47.jar",
-        "https://maven.ibiblio.org/maven2/org/mockito/mockito-core/2.8.47/mockito-core-2.8.47.jar",
+        "https://repo1.maven.org/maven2/org/mockito/mockito-core/2.9.0/mockito-core-2.9.0.jar",
+        "https://maven.ibiblio.org/maven2/org/mockito/mockito-core/2.9.0/mockito-core-2.9.0.jar",
     ],
     deps = [
         "@net_bytebuddy_byte_buddy",

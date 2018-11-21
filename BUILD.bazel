@@ -18,3 +18,35 @@ filegroup(
     name = "tink_version",
     srcs = ["tink_version.bzl"],
 )
+
+java_runtime(
+    name = "jdk8",
+    java_home = "/usr/lib/jvm/java-8-openjdk-amd64",
+    visibility = ["//visibility:public"],
+)
+
+java_runtime(
+    name = "jdk10",
+    java_home = "/usr/lib/jvm/java-1.11.0-openjdk-amd64",
+    visibility = ["//visibility:public"],
+)
+
+java_runtime(
+    name = "jdk11",
+    java_home = "/usr/lib/jvm/java-11-openjdk-amd64",
+    visibility = ["//visibility:public"],
+)
+
+config_setting(
+    name = "use_absolute_javabase",
+    values = {"define": "USE_ABSOLUTE_JAVABASE=true"},
+)
+
+java_runtime(
+    name = "absolute_javabase",
+    java_home = select({
+        ":use_absolute_javabase": "$(ABSOLUTE_JAVABASE)",
+        "//conditions:default": "",
+    }), 
+    visibility = ["//visibility:public"],
+)
